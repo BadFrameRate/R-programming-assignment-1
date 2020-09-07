@@ -9,6 +9,7 @@ pollutantmean<-function(directory,pollutant,id=1:332){
       required_mean[i]<-mean(openfile[,pollutant],na.rm=T)
       headers[i]<-openfile[i]
     }
+    names(required_mean)<-headers
     required_mean
   }
 }
