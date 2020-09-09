@@ -5,7 +5,7 @@ corr<-function(directory,threshold=0){
     n_obs<-complete(directory)
     above_thresh<-as.numeric(n_obs$id[n_obs$obs>threshold])
     if(length(above_thresh)==0) above_thresh
-    else {
+    else{
       corr<-numeric(length(above_thresh))
       for(i in 1:length(above_thresh)){
         openfile<-read.csv(paste(directory,all_files[above_thresh[i]],sep="/"))
