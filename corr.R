@@ -11,7 +11,7 @@ corr<-function(directory,threshold=0){
         openfile<-read.csv(paste(directory,all_files[above_thresh[i]],sep="/"))
         corr[i]<-cor(openfile[,2],openfile[,3],use="pairwise.complete.obs")
       }
-      names(corr)<-above_thresh
+      names(corr)<-above_thres
       corr
     }
   }
